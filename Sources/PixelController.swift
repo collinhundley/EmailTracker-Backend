@@ -32,7 +32,7 @@ class TrackerController {
     private func setupRoutes() {
         
         /// GET an email tracking pixel.
-        router.get("/email/px") { (request, response, next) in
+        router.get("/px") { (request, response, next) in
             let ip = request.remoteAddress
             if let id = request.queryParameters["id"] {
                 self.logOpen(id: id, ip: ip, date: Date())
